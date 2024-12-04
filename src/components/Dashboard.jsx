@@ -3,9 +3,13 @@ import { Pie } from "react-chartjs-2";
 import "chart.js/auto";
 import { FaBell } from "react-icons/fa";
 import { FiLogOut, FiHome, FiGrid,  FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
-import logImage from "../assets/logo.png";
+//import logImage from "../../assets/logo.png";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Link, useNavigate } from 'react-router-dom';
+import logImage from "../assets/logo.png";
+
+
+
 
 
 const Dashboard = () => {
