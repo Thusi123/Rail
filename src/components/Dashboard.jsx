@@ -4,7 +4,7 @@ import "chart.js/auto";
 import { FaBell } from "react-icons/fa";
 import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
 import { Link, useNavigate } from 'react-router-dom';
-import logImage from "../assets/Logo.png"; // Relative path from Dashboard.jsx to assets
+import logImage from "../assets/logo.png"; // Relative path from Dashboard.jsx to assets
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
