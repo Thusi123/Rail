@@ -73,11 +73,13 @@ const Dashboard = () => {
     return (
       <div className="flex h-screen">
         {/* Sidebar */}
-        <aside className="w-1/6 bg-gray-900 text-white h-screen p-4 fixed flex flex-col">
+        <aside className="w-1/6 bg-gray-500 text-white h-screen p-4 fixed flex flex-col">
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
             <div className="bg-gray-800 h-16 w-16 rounded-full flex items-center justify-center">
               <img src={logImage} alt="Logo" className="h-15 w-20" />
+              
+
             </div>
             <p className="mt-4 text-lg font-semibold">GoByRail</p>
           </div>
