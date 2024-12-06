@@ -283,19 +283,16 @@ const Dashboard = () => {
   {/* Map Display */}
   <div className="w-2/3 bg-white shadow-lg rounded-lg p-6">
     <h2 className="text-2xl font-bold mb-4">Live Location</h2>
-    <MapContainer
-      center={[7.8731, 80.7718]} // Adjusted for central Sri Lanka
-      zoom={7}
-      style={{ height: '400px', width: '100%' }}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker position={[7.8731, 80.7718]}>
-        <Popup>Central Location</Popup>
-      </Marker>
-    </MapContainer>
+    <MapContainer center={[7.8731, 80.7718]} zoom={7} style={mapContainerStyle}>
+  <TileLayer
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  />
+  <Marker position={[7.8731, 80.7718]}>
+    <Popup>Sri Lanka Center</Popup>
+  </Marker>
+</MapContainer>
+
   </div>
 </div>
    
