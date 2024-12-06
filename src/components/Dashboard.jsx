@@ -4,7 +4,8 @@ import "chart.js/auto";
 import { FaBell } from "react-icons/fa";
 import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png'; // Update path based on actual location
+import logo from '/src/assets/logo.png';
+ // Update path based on actual location
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
