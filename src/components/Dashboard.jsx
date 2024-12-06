@@ -4,7 +4,7 @@ import "chart.js/auto";
 import { FaBell } from "react-icons/fa";
 import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png';
+//import logo from '../assets/logo.png';
  // Update path based on actual location
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -79,7 +79,7 @@ const Dashboard = () => {
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
             <div className="bg-gray-800 h-16 w-16 rounded-full flex items-center justify-center">
-              <img src={logo} alt="Logo" className="h-15 w-20" />
+            {/*  <img src={logo} alt="Logo" className="h-15 w-20" /> */}
               
 
             </div>
