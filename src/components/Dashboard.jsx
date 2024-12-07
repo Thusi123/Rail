@@ -5,7 +5,7 @@ import { FaBell } from "react-icons/fa";
 import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
- // Update path based on actual location
+
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -200,100 +200,100 @@ const Dashboard = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-5 p-4">
-  {/* Search Section */}
-  <div className="col-span-1 bg-white shadow-lg rounded-lg p-6">
-    <h2 className="text-2xl font-bold mb-4">Search</h2>
-    <form>
-      <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2">From</label>
-        <select className="w-full border border-gray-300 rounded-md p-2">
-          <option>Kandy</option>
-          <option>Colombo</option>
-        </select>
+        {/* Search Section */}
+        <div className="col-span-1 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-4">Search</h2>
+          <form>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">From</label>
+              <select className="w-full border border-gray-300 rounded-md p-2">
+                <option>Kandy</option>
+                <option>Colombo</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">To</label>
+              <select className="w-full border border-gray-300 rounded-md p-2">
+                <option>Colombo</option>
+                <option>Kandy</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">Date</label>
+              <input type="date" className="w-full border border-gray-300 rounded-md p-2" />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">Time</label>
+              <input type="time" className="w-full border border-gray-300 rounded-md p-2" />
+            </div>
+            <button className="w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700 transition">
+              Search
+            </button>
+          </form>
+        </div>
+
+        {/* Crowding Level Chart */}
+        <div className="col-span-1 bg-white shadow-lg rounded-lg p-6">
+          <h3 className="text-xl font-bold mb-4">Crowding Level</h3>
+          {/* Insert the chart component here */}
+          <Pie data={data} />
+        </div>
+
+        {/* Crowding Level Chart */}
+        <div className="col-span-1 bg-white shadow-lg rounded-lg p-6">
+        
+        <h2 className="text-2xl font-bold mb-4">Train Tracking</h2>
+        </div>
+
+        {/* Real-Time Updates */}
+        <div className="col-span-3 bg-white shadow-lg rounded-lg p-6 space-y-4">
+          <h2 className="text-2xl font-bold mb-4">Real-Time Updates</h2>
+          <table className="w-full border-collapse">
+            <thead>
+              <tr>
+                <th className="border px-4 py-2 text-left">Train Name</th>
+                <th className="border px-4 py-2 text-left">From</th>
+                <th className="border px-4 py-2 text-left">To</th>
+                <th className="border px-4 py-2 text-left">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">Udarata Menike</td>
+                <td className="border px-4 py-2">Kandy</td>
+                <td className="border px-4 py-2">Colombo</td>
+                <td className="border px-4 py-2">05:00 AM - 11:00 AM</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Podi Menike</td>
+                <td className="border px-4 py-2">Badulla</td>
+                <td className="border px-4 py-2">Colombo</td>
+                <td className="border px-4 py-2">07:30 AM - 1:30 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2">To</label>
-        <select className="w-full border border-gray-300 rounded-md p-2">
-          <option>Colombo</option>
-          <option>Kandy</option>
-        </select>
-      </div>
-      <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2">Date</label>
-        <input type="date" className="w-full border border-gray-300 rounded-md p-2" />
-      </div>
-      <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2">Time</label>
-        <input type="time" className="w-full border border-gray-300 rounded-md p-2" />
-      </div>
-      <button className="w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700 transition">
-        Search
-      </button>
-    </form>
-  </div>
 
-  {/* Crowding Level Chart */}
-  <div className="col-span-1 bg-white shadow-lg rounded-lg p-6">
-    <h3 className="text-xl font-bold mb-4">Crowding Level</h3>
-    {/* Insert the chart component here */}
-    <Pie data={data} />
-  </div>
+      <div className="flex gap-6 mt-6">
+        {/* Train Details Search */}
+        <div className="w-1/3 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-4">News</h2>
+          {/* Insert train search functionality here */}
+        </div>
 
-  {/* Crowding Level Chart */}
-  <div className="col-span-1 bg-white shadow-lg rounded-lg p-6">
-  
-  <h2 className="text-2xl font-bold mb-4">Train Tracking</h2>
-  </div>
-
-  {/* Real-Time Updates */}
-  <div className="col-span-3 bg-white shadow-lg rounded-lg p-6 space-y-4">
-    <h2 className="text-2xl font-bold mb-4">Real-Time Updates</h2>
-    <table className="w-full border-collapse">
-      <thead>
-        <tr>
-          <th className="border px-4 py-2 text-left">Train Name</th>
-          <th className="border px-4 py-2 text-left">From</th>
-          <th className="border px-4 py-2 text-left">To</th>
-          <th className="border px-4 py-2 text-left">Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td className="border px-4 py-2">Udarata Menike</td>
-          <td className="border px-4 py-2">Kandy</td>
-          <td className="border px-4 py-2">Colombo</td>
-          <td className="border px-4 py-2">05:00 AM - 11:00 AM</td>
-        </tr>
-        <tr>
-          <td className="border px-4 py-2">Podi Menike</td>
-          <td className="border px-4 py-2">Badulla</td>
-          <td className="border px-4 py-2">Colombo</td>
-          <td className="border px-4 py-2">07:30 AM - 1:30 PM</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<div className="flex gap-6 mt-6">
-  {/* Train Details Search */}
-  <div className="w-1/3 bg-white shadow-lg rounded-lg p-6">
-    <h2 className="text-2xl font-bold mb-4">News</h2>
-    {/* Insert train search functionality here */}
-  </div>
-
-  {/* Map Display */}
-  <div className="w-2/3 bg-white shadow-lg rounded-lg p-6">
-    <h2 className="text-2xl font-bold mb-4">Live Location</h2>
-    <MapContainer center={[7.8731, 80.7718]} zoom={7} style={mapContainerStyle}>
-  <TileLayer
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  />
-  <Marker position={[7.8731, 80.7718]}>
-    <Popup>Sri Lanka Center</Popup>
-  </Marker>
-</MapContainer>
+        {/* Map Display */}
+        <div className="w-2/3 bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-4">Live Location</h2>
+          <MapContainer center={[7.8731, 80.7718]} zoom={7} style={mapContainerStyle}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <Marker position={[7.8731, 80.7718]}>
+          <Popup>Sri Lanka Center</Popup>
+        </Marker>
+      </MapContainer>
 
   </div>
 </div>
