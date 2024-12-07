@@ -6,8 +6,6 @@ import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } 
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-
-
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -283,18 +281,18 @@ const Dashboard = () => {
           {/* Insert train search functionality here */}
         </div>
 
-        {/* Map Display */}
-        <div className="w-2/3 bg-white shadow-lg rounded-lg p-6">
+                {/* Map Display */}
+                <div className="w-2/3 bg-white shadow-lg rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">Live Location</h2>
-          <MapContainer center={[7.8731, 80.7718]} zoom={7} style={mapContainerStyle}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
-        <Marker position={[7.8731, 80.7718]}>
-          <Popup>Sri Lanka Center</Popup>
-        </Marker>
-      </MapContainer>
+          <MapContainer center={[7.8731, 80.7718]} zoom={8} style={mapContainerStyle}>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={[7.8731, 80.7718]}>
+              <Popup>Train Location: Kandy Station</Popup>
+            </Marker>
+          </MapContainer>
 
   </div>
 </div>
