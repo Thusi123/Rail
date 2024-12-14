@@ -63,13 +63,13 @@ const Header = () => {
         <Link to="/dashboard" className="text-gray-700 hover:text-blue-500">
           Dashboard
         </Link>
-        <Link to="/tickets" className="text-gray-700 hover:text-blue-500">
+        <Link to="/Tickets" className="text-gray-700 hover:text-blue-500">
           Tickets
         </Link>
         <Link to="/predictions" className="text-gray-700 hover:text-blue-500">
           Predictions
         </Link>
-        <Link to="/tracking" className="text-gray-700 hover:text-blue-500">
+        <Link to="/live-tracking" className="text-gray-700 hover:text-blue-500">
           Tracking
         </Link>
       </nav>
@@ -121,7 +121,10 @@ const Header = () => {
 
       {/* Sign Out Confirmation Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div
+          className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center"
+          style={{ zIndex: 9999 }} // Ensure it is above other elements
+        >
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-xl font-bold mb-4">Confirm Log Out</h2>
             <p className="mb-4">Are you sure you want to Log out?</p>
@@ -142,6 +145,7 @@ const Header = () => {
           </div>
         </div>
       )}
+
     </header>
   );
 };

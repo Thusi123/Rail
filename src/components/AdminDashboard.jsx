@@ -3,6 +3,7 @@ import { Pie } from "react-chartjs-2";
 import "chart.js/auto";
 import { FaBell } from "react-icons/fa";
 import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
+import { BiData } from "react-icons/bi"; // Data Input Panel ico
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
@@ -82,15 +83,15 @@ const Dashboard = () => {
               
 
             </div>
-            <p className="mt-4 text-lg font-semibold">GoByRail</p>
+            <p className="mt-4 text-lg font-semibold">GoByRail Admin</p>
           </div>
 
           {/* Navigation Menu */}
           <ul className="flex flex-col space-y-4 mt-5">
             <li className="flex items-center space-x-3 hover:text-blue-400 cursor-pointer">
               <Link to="/home" className="flex items-center space-x-3">
-                <FiHome size={20} />
-                <p>Home</p>
+                <BiData  size={20} />
+                <p>Data Input Panel</p>
               </Link>
             </li>
             <li className="flex items-center space-x-3 hover:text-blue-400 cursor-pointer">
