@@ -25,19 +25,19 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
-      {/* Logo Section 
+      {/* Logo Section */}
       <div className="flex items-center">
-        <img src={logoImage} alt="Logo" className="h-12" />
+        <img src={logImage} alt="Logo" className="h-12" />
         <span className="ml-3 text-2xl font-bold text-blue-800">GO BY RAIL</span>
-      </div> */}
+      </div> 
 
-       {/* Logo */}
+       {/* Logo 
               <div className="flex flex-col items-center mb-8">
                 <div className=" flex items-center justify-center">
                   <img src={logImage} alt="Logo" className="h-12 w-12" />
                 </div>
                 <p className="mt-4 text-lg font-semibold">GoByRail </p>
-              </div>
+              </div> */}
 
 
 
