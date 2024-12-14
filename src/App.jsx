@@ -4,7 +4,7 @@ import LoginPage from "./components/Login";
 import SignupPage from "./components/Signup";
 import HomePage from "./components/Home";
 import Admin from "./components/Admin";
-import Dashboard from "./components/Dashboard"; // Import Dashboard
+
 import Tickets from "./components/Tickets";
 import Predictions from "./components/Predictions";
 
@@ -54,7 +54,7 @@ function App() {
           <>
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<HomePage />} />
-            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          
             <Route path="/Tickets" element={<Tickets />} />
             <Route path="/Predictions" element={<Predictions />} />
             
