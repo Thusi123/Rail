@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logImage from "../assets/logo.png"; // Adjusted import path
+import logoImage from "../assets/logo.png"; // Adjusted import path
 import { Link, useNavigate } from "react-router-dom"; // For navigation
 
 const Header = () => {
@@ -26,7 +26,7 @@ const Header = () => {
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
       {/* Logo Section */}
       <div className="flex items-center">
-        <img src={logImage} alt="Logo" className="h-12" />
+        <img src={logoImage} alt="Logo" className="h-12" />
         <span className="ml-3 text-2xl font-bold text-blue-800">GO BY RAIL</span>
       </div>
 
