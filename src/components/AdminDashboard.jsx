@@ -2,15 +2,19 @@ import React, { useState, useRef, useEffect } from "react";
 import { Pie } from "react-chartjs-2";
 import "chart.js/auto";
 import { FaBell } from "react-icons/fa";
-import { FiLogOut, FiHome, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
+import { FiLogOut, FiGrid, FiUser, FiMapPin, FiSettings, FiNavigation } from "react-icons/fi";
 import { BiData } from "react-icons/bi"; // Data Input Panel ico
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
+
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 const Dashboard = () => {
+  
+
+
   // Pie chart data sample
   const data = {
     labels: ["1st Class", "2nd Class", "3rd Class"],
@@ -72,14 +76,16 @@ const Dashboard = () => {
       setIsModalOpen(false);
     };
 
+    
+
     return (
       <div className="flex h-screen">
         {/* Sidebar */}
         <aside className="w-1/6 bg-gray-500 text-white h-screen p-4 fixed flex flex-col">
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
-            <div className="bg-gray-800 h-16 w-16 rounded-full flex items-center justify-center">
-             <img src={logo} alt="Logo" className="h-15 w-20" /> 
+            <div className=" items-center justify-center">
+             <img src={logo} alt="logo" className="h-15 w-20" /> 
               
 
             </div>
