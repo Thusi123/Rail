@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import logoImage from "../assets/logo.png"; // Adjusted import path
+ // Adjusted import path
+import logoImage from "../assets/logo.png"; // Adjust if Header.jsx is deeper in the folder structure
+
 import { Link, useNavigate } from "react-router-dom"; // For navigation
 
 const Header = () => {
